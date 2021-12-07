@@ -37,7 +37,7 @@ public class BaseClass {
 		}
 
 	
-		@BeforeSuite(groups = { "Smoke", "Sanity", "Regression" })
+		@BeforeSuite(groups = {"Smoke", "Sanity", "Regression" })
 	public void loadConfig()
 	{
 			ExtentManager.setExtent();
