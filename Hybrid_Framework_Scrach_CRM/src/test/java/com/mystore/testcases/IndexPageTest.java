@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import com.mystore.base.BaseClass;
 import com.mystore.pageobjects.IndexPage;
+import com.mystore.utility.Log;
 
 /**
  * @author Malli
@@ -37,18 +38,21 @@ public class IndexPageTest extends BaseClass {
 	@Test(groups = "Smoke")
 	
 	public void verifyLogo() {
-		
+		Log.startTestCase("verifyLogo");
+		Log.info("verifying Logo ");
 		boolean result=indexpage.validateLogo();
 		Assert.assertTrue(result);
+		Log.endTestCase("verifyLogo");
 	}
 	
 @Test(groups = "Smoke")
 	
 	public void verifiTitle() {
-		
+	Log.startTestCase("verifiTitle");
 		String actTitle=indexpage.getMyStoreTitle();
 		System.out.println("title..."+actTitle);
 		Assert.assertEquals(actTitle,"My Store");
+		Log.endTestCase("verifiTitle");
 	}
 	
 	
